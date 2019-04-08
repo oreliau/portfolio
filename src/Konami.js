@@ -9,7 +9,7 @@ const Konami = ({onClick}) => (
     </div>
     <div className="chose-game">
         <a className="konami-link" href="https://loving-meninsky-ccd2a2.netlify.com/" target="_blank" rel="noopener noreferrer"><div id="game1"></div></a>
-        <a href="https://pendu-8557ea.netlify.com/" target="_blank" rel="noopener noreferrer"><div id="game2"></div><p className="french">(french word)</p></a>
+        <a className="konami-link" href="https://pendu-8557ea.netlify.com/" target="_blank" rel="noopener noreferrer"><div id="game2"></div><p className="french">(french word)</p></a>
         
     </div>
     
