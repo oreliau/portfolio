@@ -1,14 +1,73 @@
 import React, { Component } from 'react';
 import './App.css';
+
+//image
 import gitlogo from './gitlogo.svg'
 import linklogo from './linklogo.svg'
 import maillogo from './maillogo.svg'
+import arrow from './arrow.png'
+
+
+// component
+import Konami from './Konami'
+import Project from './Project'
 
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      // le vrai konami code
+      konamiCode: ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'],
+      // les touches autorisées
+      allowedKeys: {
+        37: 'left',
+        38: 'up',
+        39: 'right',
+        40: 'down',
+        65: 'a',
+        66: 'b'
+      },
+      // suit la séquence du code
+      konamiCodePosition: 0
+    }
+    this.close = this.close.bind(this)
+  }
+
+
+  calvier(){
+    document.addEventListener('keydown', (event) => {
+      console.log(event.key)
+      const { allowedKeys, konamiCode, konamiCodePosition} = this.state
+
+      const nomTouch = event.keyCode
+      const key = allowedKeys[nomTouch] // assimile la touche à un nom
+      const requiredKey = konamiCode[konamiCodePosition] //touche requise pour continuer
+
+      if(key === requiredKey){
+          this.setState({konamiCodePosition: konamiCodePosition + 1})
+          console.log(konamiCodePosition);
+          console.log(konamiCode.length)
+      }
+    })
+  }
+
+  successVerif(){
+    const { konamiCode, konamiCodePosition} = this.state
+    if (konamiCodePosition === (konamiCode.length - 1)) {return <Konami onClick={this.close} />}
+  }
+
+  close(){
+    const game = document.getElementsByClassName('game')[0];
+
+    this.setState({konamiCodePosition: 0}, game.classList.add('hide'))
+    }
+
   render() {
+    this.calvier();
     return (
       <div className="myportfolio">
+        <div >{this.successVerif()}</div>
         <div className="profil"></div>
         <main className="présentation">
           <h1 className="nom">Oréliau KOUMEDZRO</h1>
@@ -39,10 +98,25 @@ class App extends Component {
                         <img className="maillogo logo" alt="oreliauk@gmail.com" src={maillogo} />
                   </a>
                 </li>
-              </ul>             
+              </ul>  
+              <ul className="konami">
+                <li className="touch">&#8593;</li>
+                <li className="touch">&#8593;</li>
+                <li className="touch">&#8595;</li>
+                <li className="touch">&#8595;</li>
+                <li className="touch">&#8592;</li>
+                <li className="touch">&#8594;</li>
+                <li className="touch">&#8592;</li>
+                <li className="touch">&#8594;</li>
+                <li className="touch">&#65;</li>
+                <li className="touch">&#66;</li> 
+              </ul>
+              <li className="instruction">(do it with your keyboard)</li>          
             </li>
           </ul>
+
         </main>
+
       </div>
     );
   }

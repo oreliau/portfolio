@@ -1,0 +1,25 @@
+.projets{
+    width: 100%
+}
+
+.projet{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 100px 0 100px 0;
+}
+
+.text{
+    margin: auto
+}
+
+.link:hover{
+    filter:brightness(50%)
+}
+
+.square{
+    max-width: 400px;
+    margin-right: 50px;
+}
+
+
