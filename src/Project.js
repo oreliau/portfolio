@@ -29,7 +29,6 @@ const Project = () => (
             <a href="https://square-in-nantes.netlify.com/" target='_bank'><img src={square} alt="square in nantes" className="square project-img" /></a>
         </div>
     </div>
-    <hr />
     <div className="projet">
         <div className='link'>
             <a href="https://silly-wilson-ac72ca.netlify.com/" target='_bank'><img src={myreads} alt="square in nantes" className="myreads project-img" /></a>
