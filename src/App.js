@@ -5,7 +5,7 @@ import './App.css';
 import gitlogo from './gitlogo.svg'
 import linklogo from './linklogo.svg'
 import maillogo from './maillogo.svg'
-import arrow from './arrow.png'
+
 
 
 // component
@@ -73,7 +73,7 @@ class App extends Component {
           <h1 className="nom">Oréliau KOUMEDZRO</h1>
           <ul className="description">
             <li className="texte métier">A Front-End UX/UI (junior) Developer</li>
-            <li className="texte parcours">After Earned and Sucess for 9month a Developer Scholarphip from Google and Udacity for being FRONT-END developer in Nantes.</li>
+            <li className="texte parcours">After Earned and Did for 9month a Developer Scholarphip from Google and Udacity for being FRONT-END developer in Nantes.</li>
             <li className="texte compétances">React.js / Bootstrap / NodeJs / Visual Studio Code / Adobe XD / Html 5 / Css 3</li>
             <li className="texte">
               <ul className="résaux">
@@ -111,12 +111,13 @@ class App extends Component {
                 <li className="touch">&#65;</li>
                 <li className="touch">&#66;</li> 
               </ul>
-              <li className="instruction">(do it with your keyboard)</li>          
+      
             </li>
+            <li className="instruction">(do it with your keyboard)</li>    
           </ul>
 
         </main>
-
+        <Project />
       </div>
     );
   }

@@ -46,6 +46,10 @@
   text-align: center;
 }
 
+.instruction{
+  color: darkgrey;
+}
+
 .métier{
   padding: 0 0 20px 0;
   margin: 0 0 5px 0;
@@ -121,65 +125,3 @@
  }
 
 
- /* konami code display*/
-.game{
-  z-index: 10;
-  position: absolute;
-  background-color: white;
-  height: 100vh;
-  width: 100%;
-}
-
-.menu{
-  margin: 50px 0 50px 0;
-  height: 20vh;
-}
-
-.start{
-  padding-left:  100px;
-  font-weight: bold
-}
-
-.close-display{
-  float: right;
-  margin-right: 100px
-}
-
-
-.chose-game{
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
-  width: 100%
-}
-#game1{
-  background-image: url(arcade-game.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 400px;
-  height: 400px;
-  margin: auto;
-}
-
-#game2{
-  background-image: url(pendu.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 400px;
-  height: 400px;
-  margin: auto;
-}
-
-.konami-link{margin: auto;}
-
-.konami-link:hover {
-  filter:brightness(50%);
-}
-
-.hide{
-  visibility: hidden;
-}
-
-.french{
-  text-align: center;
-}

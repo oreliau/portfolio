@@ -1,5 +1,11 @@
+.project-title{
+    text-align: center;
+
+}
+
 .projets{
-    width: 100%
+    width: 100%;
+    margin-top: 100px;
 }
 
 .projet{
@@ -18,8 +24,73 @@
 }
 
 .square{
-    max-width: 400px;
-    margin-right: 50px;
+    max-width: 600px;
+    margin-right: 300px;
 }
 
+.myreads{
+    max-width: 600px;
+    margin-left: 300px;
+}
 
+hr{
+    width: 400px;
+}
+
+.title-desc{
+    list-style-type: none;
+    font-weight: bold;
+}
+/*responsive tablette et smartphone */
+
+  /* smartphone */
+  @media screen and (max-width: 420px) {
+    .projet{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .link{
+        width: 50%;
+    }
+    .project-img{
+        margin: 0;
+        max-width: 200px;
+    }
+    .text{
+        width: 50%
+    }
+  }
+  
+     /* tablette */
+  @media screen and (min-width: 420px) and (max-width: 1030px) {
+    .projet{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .link{
+        width: 50%;
+    }
+    .project-img{
+        margin: 0;
+        max-width: 400px;
+    }
+    .text{
+        width: 50%
+    }
+}
+
+    /* medium screen */
+    @media screen and (min-width: 1030px) and (max-width: 1640px) {
+        .projet{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .project-img{
+            margin: 0;
+            max-width: 600px;
+        }
+        .text{
+            width: 50%
+        }
+    }
