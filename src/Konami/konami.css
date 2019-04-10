@@ -5,6 +5,7 @@
     background-color: white;
     height: 100vh;
     width: 100%;
+    top: 0;
 }
 
 .menu{
@@ -51,8 +52,8 @@
     background-image: url(memory.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 400px;
-    height: 400px;
+    width: 420px;
+    height: 450px;
     margin: auto;  
 }
 
@@ -63,10 +64,16 @@ filter:brightness(50%);
 }
 
 .hide{
-visibility: hidden;
+display: none;
 }
+
+.hidescrollbar{
+    overflow: hidden;
+}
+  
 
 .french{
 text-align: center;
+margin: 0px ;
 }
 

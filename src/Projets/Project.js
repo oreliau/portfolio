@@ -3,14 +3,15 @@ import './Project.css'
 
 import square from './square.png'
 import myreads from './myreads.png'
+import vitrine from './vitrine.png'
 
-const Project = () => (
+const Project = ({onClick}) => (
 <div className="projets">
     <h2 className="project-title">My Projects done</h2>
-    <div className="projet">
+    <div className="projet projet1">
         <div className="text">
-            <ul >
-                <li className="title-desc">My Favorites Squares in Nantes</li>
+            <ul>
+                <li className="title-desc">My Favorites Squares in Nantes(click on picture to access on the API) </li>
                 <br />
                 <ul>
                     <li>Did with React.JS</li>
@@ -29,13 +30,13 @@ const Project = () => (
             <a href="https://square-in-nantes.netlify.com/" target='_bank'><img src={square} alt="square in nantes" className="square project-img" /></a>
         </div>
     </div>
-    <div className="projet">
+    <div className="projet projet2">
         <div className='link'>
             <a href="https://silly-wilson-ac72ca.netlify.com/" target='_bank'><img src={myreads} alt="square in nantes" className="myreads project-img" /></a>
         </div>
         <div className="text">
             <ul >
-                <li className="title-desc"> My Reads</li>
+                <li className="title-desc"> My Reads(click on picture to access on the API)</li>
                 <br />
                 <ul>
                     <li>Did with React.JS</li>
@@ -47,7 +48,22 @@ const Project = () => (
             </ul>
         </div>
     </div>
-    <div className="projet"></div>
+    <div className="projet projet3" >
+        <div className="text">
+            <ul>
+                <li className="title-desc">Site "vitrine" done to a client(click for fullsize)</li>
+                <br />
+                <ul>
+                    <li>Did with Html5 / Css3 / Bootsrap</li>
+                    <li>Used AGILE: scrum method</li>
+                </ul>
+            </ul>
+        </div>
+        <div id="overlay" onClick={() => onClick()} className='overlay'><img src={vitrine} id='imgbigsize'alt="vitrine" /></div>
+        <div className='link'>
+            <img onClick={() => onClick(vitrine)} src={vitrine} alt="square in nantes" className="square project-img" />
+        </div>
+    </div>
 
 </div>
 )

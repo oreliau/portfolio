@@ -46,6 +46,14 @@
   text-align: center;
 }
 
+.touch{
+  font-size: 25px;
+}
+
+.touchBlack{
+  color: black;
+}
+
 .instruction{
   color: darkgrey;
 }
@@ -75,7 +83,7 @@
   margin-top: 100px;
 }
 .instruction{
-  font-size: 10px
+  font-size: 15px
 }
 
 .touch{ 
@@ -123,5 +131,3 @@
 
   .nom { font-size: 275% }
  }
-
-
