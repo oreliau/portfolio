@@ -38,6 +38,7 @@
 .nom{
   margin: 10px 0 10px 0;
   font-size: 500%;
+  font-weight: 400;
 }
 
 .texte{
@@ -111,10 +112,18 @@
   
   .présentation{
     width: 100%;
-    padding: 0 5px 0 5px;
+    padding: 0
   }
 
   .nom { font-size: 275% }
+ }
+
+ .touch{
+   font-size: 20px
+ }
+
+ .konami{
+   padding-left: 0 
  }
 
    /* tablette */
@@ -131,3 +140,14 @@
 
   .nom { font-size: 275% }
  }
+
+ /*keyboard*/
+ .simple-keyboard.hg-theme-default .hg-button {
+   width: 50px;
+  }
+
+  /* medium screen */
+  @media screen and (min-width: 1030px){
+  .keyboard{
+    visibility: hidden;
+  }}

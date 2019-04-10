@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 
+//Le clavier virtuel
+import Keyboard from 'react-simple-keyboard';
+import 'react-simple-keyboard/build/css/index.css';
+
 //image
 import gitlogo from './gitlogo.svg'
 import linklogo from './linklogo.svg'
@@ -15,17 +19,18 @@ import Project from './Projets/Project'
 
 
 class App extends Component {
+
   constructor(props){
     super(props);
     this.state = {
       // le vrai konami code
-      konamiCode: ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'],
+      konamiCode: ['&#8593;', '&#8593;', '&#8595;', '&#8595;', '&#8592;', '&#8594;', '&#8592;', '&#8594;', 'b', 'a'],
       // les touches autorisées
       allowedKeys: {
-        37: 'left',
-        38: 'up',
-        39: 'right',
-        40: 'down',
+        37: '&#8592;', //left
+        38: '&#8593;', //up
+        39: '&#8594;', //right
+        40: '&#8595;',
         65: 'a',
         66: 'b'
       },
@@ -33,11 +38,17 @@ class App extends Component {
       konamiCodePosition: 0
     }
     this.close = this.close.bind(this);
-    this.calvier = this.calvier.bind(this)
+    this.clavier = this.clavier.bind(this)
+  }
+  
+
+  componentDidMount(){
+    this.clavier();
+    this.onKeyPress();
   }
 
   // capte les touches du code
-  calvier(){
+  clavier(){
     document.addEventListener('keydown', (event) => {
       const { allowedKeys, konamiCode, konamiCodePosition} = this.state
       const nomTouch = event.keyCode
@@ -47,23 +58,37 @@ class App extends Component {
       if(key === requiredKey){
           this.setState((prevState) => ({konamiCodePosition: prevState.konamiCodePosition + 1}));
 
-          //const touch = document.getElementsByClassName(`touch${konamiCodePosition}`)[0];
-          //touch.classList.add('touchBlack')
+          const touch = document.getElementsByClassName(`touch${konamiCodePosition}`)[0];
+          touch.classList.add('touchBlack')
       }
     })
+  }
+
+  onKeyPress = (button) => {
+      const { konamiCode, konamiCodePosition} = this.state
+      const requiredKey = konamiCode[konamiCodePosition] //touche requise pour continuer
+      console.log(button)
+      if(button === requiredKey){
+          this.setState((prevState) => ({konamiCodePosition: prevState.konamiCodePosition + 1}));
+
+          const touch = document.getElementsByClassName(`touch${konamiCodePosition}`)[0];
+          touch.classList.add('touchBlack')
+      }
   }
 
   //vérif le success du code
   successVerif(){
     const { konamiCode, konamiCodePosition} = this.state
-    if (konamiCodePosition === (konamiCode.length - 1)) {return this.successKonami()}
+    if (konamiCodePosition === (konamiCode.length)) {return this.successKonami()}
   }
 
+  //au sccess faire l'affichage des jeux
   successKonami(){
     this.hideProfil();
     return ( <Konami onClick={this.close}/>)
   }
 
+  //cache le profil et la barre de scroll
   hideProfil(){
     const portfolio = document.getElementsByClassName('myportfolio')[0]
     const body = document.querySelector('body')
@@ -72,14 +97,20 @@ class App extends Component {
     portfolio.classList.add('hide');
   }
 
+  //remontre le profil et reset la couleur des touches
   showProfil(){
     const portfolio = document.getElementsByClassName('myportfolio')[0]
     const body = document.querySelector('body')
     const game = document.getElementsByClassName('game')[0];
+    const touch = document.getElementsByClassName('touch')
 
     body.classList.remove('hidescrollbar');
     portfolio.classList.remove('hide');
     game.classList.add('hide');
+
+    for(let i = 0; i < touch.length; i++){
+      document.getElementsByClassName(`touch${i}`)[0].classList.remove('touchBlack')
+    };
   }
 
   // close le display konamicode
@@ -87,6 +118,7 @@ class App extends Component {
     this.setState({konamiCodePosition: 0}, this.showProfil() )
   }
   
+  //permet d'afficher les images cliquable en full size
   showImg(){
     const overlay = document.getElementById('overlay');
     const body = document.querySelector('body');
@@ -103,7 +135,6 @@ class App extends Component {
   }
 
   render() {
-    this.calvier();
     return (
       <div className="App">
       <div className="myportfolio">
@@ -150,8 +181,22 @@ class App extends Component {
                 <li className="touch touch5">&#8594;</li>
                 <li className="touch touch6">&#8592;</li>
                 <li className="touch touch7">&#8594;</li>
-                <li className="touch touch8">&#65;</li>
-                <li className="touch touch9">&#66;</li> 
+                <li className="touch touch8">&#66;</li> 
+                <li className="touch touch9">&#65;</li>
+                <div className="keyboard">
+                <Keyboard
+                  onKeyPress={button =>
+                    this.onKeyPress(button)}
+                    layout={{
+                      default: [
+                        ' &#8593;     ',
+                        '&#8592;  &#8594;  b  a',
+                        ' &#8595;     '
+
+                      ]
+                    }}
+                />
+              </div>
               </ul>
             </li>
             <li className="instruction">(Do this code with your keybord to see my games or scroll down to see my other Projets.)</li>    

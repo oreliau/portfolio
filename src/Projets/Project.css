@@ -1,6 +1,7 @@
 .project-title{
     text-align: center;
-
+    font-size: 50px;
+    font-weight: 300;
 }
 
 .projets{
@@ -16,7 +17,8 @@
 }
 
 .text{
-    margin: auto
+    margin: auto;
+    width: 50%
 }
 
 .link:hover{
@@ -35,7 +37,16 @@
 
 .title-desc{
     list-style-type: none;
-    font-weight: bold;
+    font-weight: 600;
+    text-align: center;
+}
+
+.aim{
+    list-style-type: none;
+}
+
+.objectifs{
+    list-style-type: disc;
 }
 /*responsive tablette et smartphone */
 
@@ -46,17 +57,41 @@
         flex-wrap: wrap;
     }
     .link{
-        width: 50%;
+        width: 100%;
     }
-    .project-img{
-        margin: 0;
-        max-width: 150px;
-    }
-    .text{
-        width: 50%
-    }
+
     .myreads{
         float: right;
+    }
+    .text{
+        margin: 0;
+        width: 100%;
+        padding: 0
+    }
+    .text-ul{
+        padding: 0;
+    }
+    .project-img{
+        width: 100%;
+        margin: 0
+    }
+    .project-title{
+        font-size: 25px;
+    }
+    .projet2{
+        display: flex;
+        flex-wrap: wrap
+    }
+    .projet2 > .text2{
+        order: 1
+    }
+    .projet2 > .link2{
+        order: 2
+    }
+    #imgbigsize{
+        width: 100%;
+        height: initial !important;
+        padding-top: 150px
     }
   }
   
@@ -66,15 +101,16 @@
         display: flex;
         flex-wrap: wrap;
     }
+    .projets{
+        width: 90%;
+        margin: auto
+    }
     .link{
         width: 50%;
     }
     .project-img{
         margin: 0;
-        max-width: 400px;
-    }
-    .text{
-        width: 50%
+        max-width: 350px;
     }
     .myreads{
         float: right;
@@ -91,9 +127,6 @@
         .project-img{
             margin: 0;
             max-width: 600px;
-        }
-        .text{
-            width: 50%
         }
     }
 

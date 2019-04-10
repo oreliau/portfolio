@@ -77,3 +77,26 @@ text-align: center;
 margin: 0px ;
 }
 
+/*responsive tablette et smartphone */
+
+  /* smartphone */
+  @media screen and (max-width: 420px) {
+    #game1{
+          width: 150px;
+          height: 150px ;
+    }
+    #game2{
+        width: 150px ;
+        height: 150px ;
+    }
+    #game3{
+        width: 200px ;
+        height: 200px ;
+    }
+    .start{
+        padding-left: 10px;
+    }
+    .close-display{
+        margin-right: 0;
+    }
+  }
