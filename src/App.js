@@ -189,9 +189,8 @@ class App extends Component {
                     this.onKeyPress(button)}
                     layout={{
                       default: [
-                        ' &#8593;     ',
-                        '&#8592;  &#8594;  b  a',
-                        ' &#8595;     '
+                        'B &#8593; A',
+                        '&#8592; &#8595; &#8594;'
 
                       ]
                     }}
