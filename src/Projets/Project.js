@@ -63,7 +63,7 @@ const Project = ({onClick}) => (
                 <li className="title-desc">Site "vitrine" done to a client(click for fullsize)</li>
                 <br />
                 <ul className="objectifs">
-                    <li>Did with Html5 / Css3 / Bootsrap</li>
+                    <li>Did with Html5 / Css3 / Bootsrap / Javascript</li>
                     <li>Used AGILE: scrum method with my client</li>
                 </ul>
             </ul>
