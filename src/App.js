@@ -24,15 +24,15 @@ class App extends Component {
     super(props);
     this.state = {
       // le vrai konami code
-      konamiCode: ['&#8593;', '&#8593;', '&#8595;', '&#8595;', '&#8592;', '&#8594;', '&#8592;', '&#8594;', 'b', 'a'],
+      konamiCode: ['&#8593;', '&#8593;', '&#8595;', '&#8595;', '&#8592;', '&#8594;', '&#8592;', '&#8594;', 'B', 'A'],
       // les touches autorisées
       allowedKeys: {
         37: '&#8592;', //left
         38: '&#8593;', //up
         39: '&#8594;', //right
         40: '&#8595;',
-        65: 'a',
-        66: 'b'
+        65: 'A',
+        66: 'B'
       },
       // suit la séquence du code
       konamiCodePosition: 0
@@ -191,7 +191,6 @@ class App extends Component {
                       default: [
                         'B &#8593; A',
                         '&#8592; &#8595; &#8594;'
-
                       ]
                     }}
                 />
