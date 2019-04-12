@@ -60,7 +60,7 @@ const Project = ({onClick}) => (
     <div className="projet projet3" >
         <div className="text">
             <ul className="text-ul">
-                <li className="title-desc">Site "vitrine" done to a client(click for fullsize)</li>
+                <li className="title-desc">Web site done to a client(click for fullsize)</li>
                 <br />
                 <ul className="objectifs">
                     <li>Did with Html5 / Css3 / Bootsrap / Javascript</li>
