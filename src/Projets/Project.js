@@ -4,6 +4,7 @@ import './Project.css'
 import square from './square.png'
 import myreads from './myreads.png'
 import vitrine from './vitrine.png'
+import naofood from './naofood.png'
 
 const Project = ({onClick}) => (
 <div className="projets">
@@ -36,7 +37,7 @@ const Project = ({onClick}) => (
     </div>
     <div className="projet projet2">
         <div className='link link2'>
-            <a href="https://silly-wilson-ac72ca.netlify.com/" target='_bank'><img src={myreads} alt="square in nantes" className="myreads project-img" /></a>
+            <a href="https://silly-wilson-ac72ca.netlify.com/" target='_bank'><img src={myreads} alt="myread" className="myreads project-img" /></a>
         </div>
         <div className="text text2">
             <ul className="text-ul">
@@ -71,6 +72,28 @@ const Project = ({onClick}) => (
         <div id="overlay" onClick={() => onClick()} className='overlay'><img src={vitrine} id='imgbigsize'alt="vitrine" /></div>
         <div className='link'>
             <img onClick={() => onClick(vitrine)} src={vitrine} alt="square in nantes" className="square project-img" />
+        </div>
+    </div>
+    <div className="projet projet4">
+        <div className='link link4'>
+            <a target='_bank'><img src={naofood} alt="Naofood" className="naofood project-img" /></a>
+        </div>
+        <div className="text text4">
+            <ul className="text-ul">
+                <li className="title-desc"> Naofood</li>
+                <br />
+                <ul>
+                    <li className="aim"><span>Aim:</span> Create an API on wordpress for delivery food on web for mobile.</li>
+                    <br />
+                    <ul className="objectifs">
+                        <li>Ajax</li>
+                        <li>Choose your day and hour</li>
+                        <li>You can choose 2 restaurants max</li>
+                        <li>Interface for restaurant and biker</li>
+                        <li>wordpress / Woocomerce</li>
+                    </ul>
+                </ul>
+            </ul>
         </div>
     </div>
 

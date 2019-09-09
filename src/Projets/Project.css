@@ -155,3 +155,9 @@ p {
     margin-top: 300px;
     text-align: center;
 }
+
+.naofood{
+   height: 500px;
+   border: solid 1px black;
+   border-radius: 15px;
+}
