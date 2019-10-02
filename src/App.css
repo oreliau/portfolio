@@ -4,6 +4,10 @@
   flex-wrap: wrap;
 }
 
+.naofood{
+  margin-left: 50%
+}
+
 .myportfolio{
   height: 100vh;
 }
