@@ -143,7 +143,7 @@ class App extends Component {
           <h1 className="nom">Oréliau KOUMEDZRO</h1>
           <ul className="description">
             <li className="texte métier">A Front-End UX/UI Developer</li>
-            <li className="texte parcours">After Earned and Did for 9month a Developer Scholarphip from Google and Udacity for being FRONT-END developer in Paris.</li>
+            <li className="texte parcours">After Earned and Did for 9month a Developer Scholarphip from Google and Udacity for being WEB developer.</li>
             <li className="texte compétances">React.js / AJAX / Php / JSON / MySQL / Wordpress / Woocomerce / Bootstrap / NodeJs / Visual Studio Code / Adobe XD / Html 5 / Css 3</li>
             <li className="texte Cv">                  
               <a  href={CV} download="CV Oréliau KOUMEDZRO">Télécharger CV</a>
